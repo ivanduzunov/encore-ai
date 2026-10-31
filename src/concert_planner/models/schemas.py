@@ -1,4 +1,3 @@
-
 """Pydantic models used by the Concert Planner agents."""
 
 from pydantic import BaseModel

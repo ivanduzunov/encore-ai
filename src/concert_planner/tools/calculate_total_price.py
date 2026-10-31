@@ -1,4 +1,3 @@
-
 """Tool for calculating the total festival trip price."""
 
 from langchain_core.tools import tool
@@ -13,8 +12,4 @@ def calculate_total_price(
     """
     Calculate the total price of the festival trip.
     """
-    return (
-        festival_price
-        + accommodation_price
-        + flight_price
-    )
+    return festival_price + accommodation_price + flight_price

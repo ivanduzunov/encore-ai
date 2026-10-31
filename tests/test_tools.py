@@ -17,7 +17,6 @@ def test_calculate_total_price():
     assert result == 450
 
 
-
 def test_generate_final_summary():
     """The tool should generate a summary of the complete trip."""
 

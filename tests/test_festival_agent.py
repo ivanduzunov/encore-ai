@@ -51,6 +51,7 @@ def test_research_festivals():
         ]
     }
 
+
 def test_create_festival_agent():
     """The factory should configure structured output with FestivalResults."""
 
@@ -60,16 +61,13 @@ def test_create_festival_agent():
 
     llm.with_structured_output.assert_called_once_with(FestivalResults)
 
+
 def test_initialize_festival_agent():
     """The initializer should create and return a configured festival agent."""
 
     with (
-        patch(
-            "concert_planner.agents.festival_agent.create_llm"
-        ) as mock_create_llm,
-        patch(
-            "concert_planner.agents.festival_agent.create_festival_agent"
-        ) as mock_create_agent,
+        patch("concert_planner.agents.festival_agent.create_llm") as mock_create_llm,
+        patch("concert_planner.agents.festival_agent.create_festival_agent") as mock_create_agent,
     ):
         llm = MagicMock()
         agent = MagicMock()
@@ -82,6 +80,7 @@ def test_initialize_festival_agent():
         mock_create_llm.assert_called_once_with()
         mock_create_agent.assert_called_once_with(llm)
         assert result is agent
+
 
 def test_create_llm():
     """The LLM should use the configured model and API key."""

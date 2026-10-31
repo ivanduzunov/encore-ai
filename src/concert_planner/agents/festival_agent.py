@@ -19,11 +19,13 @@ def create_llm():
         api_key=OPENAI_API_KEY,
     )
 
+
 def initialize_festival_agent():
     """Initialize the Festival Research Agent."""
 
     llm = create_llm()
     return create_festival_agent(llm)
+
 
 def create_festival_agent(llm):
     """Create the Festival Research Agent with structured output."""
@@ -47,9 +49,6 @@ def research_festivals(state: ConcertPlannerState, festival_agent):
         ]
     )
 
-    festivals = [
-        festival.model_dump()
-        for festival in result.festivals
-    ]
+    festivals = [festival.model_dump() for festival in result.festivals]
 
     return {"festivals": festivals}

@@ -1,4 +1,3 @@
-
 """Shared state definition for the Concert Planner workflow."""
 
 from typing import TypedDict
