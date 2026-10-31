@@ -1,15 +1,8 @@
-╔══════════════════════════════════════════╗
-║                                          ║
-║              ♪ ENCORE AI ♪               ║
-║                                          ║
-║         AI CONCERT & FESTIVAL            ║
-║               TRIP PLANNER               ║
-║                                          ║
-║   Discover the music. Plan the journey.  ║
-║             Live the encore.             ║
-║                                          ║
-╚══════════════════════════════════════════╝
-# EncoreAI
+# ♪ ENCORE AI ♪ 
+
+AI CONCERT & FESTIVAL TRIP PLANNER
+Discover the music. Plan the journey.
+Live the encore.
 
 AI-powered concert and festival trip planner built with LangChain, LangGraph, and specialized AI agents.
 
