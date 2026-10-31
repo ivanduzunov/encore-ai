@@ -17,6 +17,7 @@ dependencies = [
 dev = [
     "pytest>=8.0",
     "ruff>=0.6",
+    "langchain-core>=1.0",
 ]
 
 [tool.setuptools.packages.find]
