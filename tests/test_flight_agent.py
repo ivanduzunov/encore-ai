@@ -46,6 +46,7 @@ def test_create_llm(mock_chat_openai):
         api_key=OPENAI_API_KEY,
     )
 
+
 def test_research_flights():
     flight = Flight(
         airline="Lufthansa",
@@ -57,9 +58,7 @@ def test_research_flights():
     )
 
     mock_agent = MagicMock()
-    mock_agent.invoke.return_value = MagicMock(
-        flights=[flight]
-    )
+    mock_agent.invoke.return_value = MagicMock(flights=[flight])
 
     state = {
         "selected_festival": {"name": "Wacken Open Air"},
@@ -71,9 +70,7 @@ def test_research_flights():
 
     mock_agent.invoke.assert_called_once()
 
-    assert result == {
-        "flights": [flight.model_dump()]
-    }
+    assert result == {"flights": [flight.model_dump()]}
 
 
 def test_research_flights_with_feedback():
@@ -87,9 +84,7 @@ def test_research_flights_with_feedback():
     )
 
     mock_agent = MagicMock()
-    mock_agent.invoke.return_value = MagicMock(
-        flights=[flight]
-    )
+    mock_agent.invoke.return_value = MagicMock(flights=[flight])
 
     state = {
         "selected_festival": {"name": "Wacken Open Air"},

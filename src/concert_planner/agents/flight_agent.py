@@ -86,10 +86,7 @@ def research_flights(
         ]
     )
 
-    flights = [
-        flight.model_dump()
-        for flight in result.flights
-    ]
+    flights = [flight.model_dump() for flight in result.flights]
 
     print(f"\n✈️ Found {len(flights)} flight options.")
 
