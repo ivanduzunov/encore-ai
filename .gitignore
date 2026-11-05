@@ -7,6 +7,11 @@ __pycache__/
 htmlcov/
 *.egg-info/
 
+#test scripts
+test_openai.py
+test_accommodation.py
+test_flight.py
+
 # Virtual environments
 .venv/
 venv/
